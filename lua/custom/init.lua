@@ -6,4 +6,5 @@ require 'custom.vscode'
 vim.cmd.colorscheme 'vscode'
 
 -- Bind keys
-vim.keymap.set('n', '<leader>f', ':ClangdSwitchSourceHeader<CR>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<leader>f', ':ClangdSwitchSourceHeader<CR>', { desc = 'Switch c/c++ header and source file' })
+vim.keymap.set('n', '<leader>n', ':Neotree toggle right<CR>', { desc = 'Neotree toggle' })
