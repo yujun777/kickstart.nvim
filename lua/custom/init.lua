@@ -8,3 +8,8 @@ vim.cmd.colorscheme 'vscode'
 -- Bind keys
 vim.keymap.set('n', '<leader>f', ':ClangdSwitchSourceHeader<CR>', { desc = 'Switch c/c++ header and source file' })
 vim.keymap.set('n', '<leader>n', ':Neotree toggle right<CR>', { desc = 'Neotree toggle' })
+
+vim.opt.termguicolors = true
+require('bufferline').setup {}
+
+require('nvim-lastplace').setup {}
