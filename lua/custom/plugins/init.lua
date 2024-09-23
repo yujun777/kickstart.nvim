@@ -6,8 +6,6 @@ return {
   -- theme
   { 'Mofiqul/vscode.nvim' },
 
-  { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
-
   {
     'ethanholz/nvim-lastplace',
     lazy = true,

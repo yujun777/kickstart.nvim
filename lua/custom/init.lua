@@ -10,6 +10,6 @@ vim.keymap.set('n', '<leader>f', ':ClangdSwitchSourceHeader<CR>', { desc = 'Swit
 vim.keymap.set('n', '<leader>n', ':Neotree toggle right<CR>', { desc = 'Neotree toggle' })
 
 vim.opt.termguicolors = true
-require('bufferline').setup {}
 
+-- open file at last open line
 require('nvim-lastplace').setup {}
