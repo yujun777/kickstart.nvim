@@ -173,7 +173,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<C-i>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -846,11 +846,30 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'tokyonight'
 
       -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
+      -- vim.cmd.hi 'Comment gui=none'
     end,
+    opts = {
+      style = 'moon',
+
+      -- styles = {
+      --   comments = { italic = true },
+      --   keywords = { italic = true },
+      -- },
+      --
+      on_colors = function(colors)
+        colors.comment = '#dadada'
+        colors.comment = '#afafaf'
+      end,
+      on_highlights = function(hl, colors)
+        local t = { fg = '#5A5A5A' }
+        hl.LineNr = t
+        hl.LineNrAbove = t
+        hl.LineNrBelow = t
+      end,
+    },
   },
 
   -- Highlight todo, notes, etc in comments

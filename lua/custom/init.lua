@@ -1,9 +1,10 @@
 -- Theme
-require 'custom.vscode'
+-- require 'custom.vscode'
+-- vim.cmd.colorscheme 'vscode'
 
 -- status line
 require('lualine').setup {
-  options = { theme = 'vscode' },
+  --options = { theme = 'tokyonight-moon' },
 }
 
 -- lazygit
